@@ -1,0 +1,35 @@
+<%= form_for @user do |f| %>
+  
+  <%= f.label :first_name %>
+  <%= f.text_field :first_name %>
+  <br/>
+
+  <%= f.label :last_name %>
+  <%= f.text_field :last_name %>
+  <br/>
+
+  <%= f.label "Date of Birth" %>
+  <%= f.date_field :dob %>
+  <br/>
+
+  <%= label_tag("Gender:") %>
+  <%= label_tag(:gender_male, "M") %>
+  <%= f.radio_button(:gender, "M", checked: @user.gender == "M") %>
+  <%= label_tag(:gender_female, "F") %>
+  <%= f.radio_button(:gender, "F", checked: @user.gender == "F") %>
+  <br />
+
+  <%= f.label :email %>
+  <%= f.email_field :email %>
+  <br/>
+
+  <%= f.label :password %>
+  <%= f.password_field :password %>
+  <br/>
+
+  <%= f.label :password_confirmation %>
+  <%= f.password_field :password_confirmation %>
+  <br/>
+
+  <%= f.submit @user.id.nil? ? "Join" : "Save Changes" %>
+<% end %>
