@@ -1,1 +1,7 @@
-_form.html.erb
+<%= form_tag("/search", method: "get") do |f| %>
+  <%= label_tag("State Abbreviation:") %>
+  <%= text_field_tag :provider_state %>
+  <%= label_tag("Procedure:") %>
+  <%= text_field_tag :drg_definition %>
+  <%= submit_tag("Search") %>
+<% end %>

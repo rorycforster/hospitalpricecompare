@@ -1,4 +1,5 @@
 class UsersController < ApplicationController
+
   before_action :load_user, only: [:show, :edit, :update, :destroy]
 
   def new
@@ -18,6 +19,10 @@ class UsersController < ApplicationController
   end
 
   def show
+    render(:show)
+  end
+
+  def index
   end
 
   def edit

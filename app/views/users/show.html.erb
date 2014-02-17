@@ -1,8 +1,9 @@
 <h2>Welcome <%= @user.first_name %></h2>
 
-<ul>
-  <li><%= link_to "Search Hospitals", index_hospital_path</li>
-</ul>
+
+<p><%= link_to "Search Hospitals", hospitals_path %></p>
+
+
 
 <p><%= link_to "Edit My Info", edit_user_path(@user) %></p>
 

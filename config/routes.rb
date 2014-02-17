@@ -5,7 +5,7 @@ Hospitalpricecompare::Application.routes.draw do
 
   resources :hospitals do
     collection do
-      get "listings"
+      get "search"
     end
   end
 
