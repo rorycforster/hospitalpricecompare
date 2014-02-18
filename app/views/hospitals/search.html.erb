@@ -1,6 +1,11 @@
 <h2>Search Results</h2>
 <ul>
   <% @results.each do |result| %>
-  <li><%= result["provider_name"] %> <%= button_to "Favorite", action: "create", controller: "favorites", user_id: session[:user_id], data: result %></li>
+  <li><%= result["provider_name"] %> ,
+    <%= result["provider_city"] %> ,
+    <%= result["provider_state"] %> 
+    Average Covered Charges <%= number_to_currency(result["average_covered_charges"].to_i) %> 
+    Average Medicare Payments <%= number_to_currency(result["average_medicare_payments"].to_i) %> 
+    <%= button_to "Favorite", action: "create", controller: "favorites", user_id: session[:user_id], data: result %></li>
   <% end %>
 </ul>

@@ -1,6 +1,13 @@
-<h2>Hello</h2>
+<h2>Saved Hospitals</h2>
 <ul>
 <% @favorites.each do |favorite|%>
-<li><%= favorite.hospital.provider_name %></li>
+<li><%= favorite.hospital.provider_name %>.
+  <%= favorite.hospital.provider_street_address %>,
+  <%= favorite.hospital.provider_city %>,
+  <%= favorite.hospital.provider_state %>
+  <%= favorite.hospital.provider_zip_code %>
+  <%= button_to "Delete", user_favorite_path(@user.id, favorite.id), method: "delete" %>
+</li>
+
 <% end %>
 </ul>

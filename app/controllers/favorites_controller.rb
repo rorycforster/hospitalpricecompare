@@ -1,4 +1,5 @@
 class FavoritesController < ApplicationController
+  before_action :load_favorite, only: [:show, :edit, :update, :destroy]
   def index
     @user = User.find(session[:user_id])
     @favorites = @user.favorites
@@ -14,21 +15,17 @@ class FavoritesController < ApplicationController
     redirect_to user_favorites_path(session(:user_id))
   end
 
-  def show
-    @favorites.each{|hosp|hosp.listing}
-  end
-
   def destroy
     @favorite.destroy
-    session.destroy
-    redirect_to user_path
+    redirect_to user_favorites_path(session(:user_id))
   end
-
-
   
   private
 
   def hospital_params
     params.require(:data).permit(:provider_name, :provider_street_address, :provider_city, :provider_state, :provider_zip_code)
+  end
+  def load_favorite
+    return @favorite = Favorite.find(params[:id])
   end
 end
