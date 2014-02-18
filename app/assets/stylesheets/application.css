@@ -12,6 +12,21 @@
  *= require_tree .
  */
 
+
+
 h1{font-family: 'Patua One', cursive;
-  color: #3c5f96
+  color: #E8E8F0
+}
+
+body{
+  background-color: #182945;
+}
+
+a{
+  font-family: Arial, Helvetica, sans-serif;
+  color: #FBF6CE;
+}
+
+h2{
+  color: #E8E8F0
 }

@@ -1,3 +1,4 @@
+<body>
 <%= form_for @user do |f| %>
   
   <%= f.label :first_name %>
@@ -33,3 +34,4 @@
 
   <%= f.submit @user.id.nil? ? "Join" : "Save Changes" %>
 <% end %>
+</body>

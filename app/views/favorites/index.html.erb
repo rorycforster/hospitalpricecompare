@@ -1,4 +1,8 @@
+<head>
 <h2>Saved Hospitals</h2>
+</head>
+<body>
+
 <ul>
 <% @favorites.each do |favorite|%>
 <li><%= favorite.hospital.provider_name %>.
@@ -11,3 +15,4 @@
 
 <% end %>
 </ul>
+</body>

@@ -1,10 +1,9 @@
 
-<link href='http://fonts.googleapis.com/css?family=Patua+One' rel='stylesheet' type='text/css'>
-<h1>Hospital Price Compare</h1>
 
 <body>
-
+<link href='http://fonts.googleapis.com/css?family=Patua+One' rel='stylesheet' type='text/css'>
+<h1>Hospital Price Compare</h1>
 <div class="user_panel">
-  <p><%= link_to "Join Now", new_user_path %></p>
+  <p><%= link_to "Join Now", new_user_path if session[:user_id].nil? %></p>
 </div>
 </body>
