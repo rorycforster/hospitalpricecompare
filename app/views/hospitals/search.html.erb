@@ -1,2 +1,6 @@
-<h1>Search Results</h1>
-<%  %>
+<h2>Search Results</h2>
+<ul>
+  <% @results.each do |result| %>
+  <li><%= result %></li>
+  <% end %>
+</ul>
