@@ -4,12 +4,11 @@ class HospitalsController < ApplicationController
     render (:index)
   end
 
-  def search
-    HTTParty.get("http://data.cms.gov/resource/97k6-zzx3.json?provider_state=#{params[:provider_state]}&drg_definition=#{params[:drg_definition].gsub(" ","+")}")
-  end
 
-  def show
-    render(:search)
+  def search
+    @procedure = (params[:drg_definition]).to_s.gsub(" ","+")
+    HTTParty.get("http://data.cms.gov/resource/97k6-zzx3.json?provider_state=#{params[:provider_state]}&drg_definition=#{@procedure}")
+    redirect_to hospital_path
   end
 
   #def listing(provider_id)
