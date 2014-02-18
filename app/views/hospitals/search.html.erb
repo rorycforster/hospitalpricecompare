@@ -1,6 +1,6 @@
 <h2>Search Results</h2>
 <ul>
   <% @results.each do |result| %>
-  <li><%= result %></li>
+  <li><%= result["provider_name"] %> <%= button_to "Favorite", action: "create", controller: "favorites", user_id: session[:user_id], data: result %></li>
   <% end %>
 </ul>

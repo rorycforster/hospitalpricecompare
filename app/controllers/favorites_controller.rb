@@ -1,8 +1,6 @@
 class FavoritesController < ApplicationController
-  before_action(:load_user)
-
   def index
-    @user = User.find_by(id: params[:user_id])
+    @user = User.find(session[:user_id])
     @favorites = @user.favorites
   end
 
@@ -11,12 +9,9 @@ class FavoritesController < ApplicationController
   end
 
   def create
-    @favorite = Favorite.new(favorite_params)
-    @favorite.user = @user
-    @favorite.hospital = @hospital
-    @favorite.save
-
-    redirect_to user_favorite_path(@user)
+    @hospital = Hospital.create(hospital_params)
+    @favorite = Favorite.create(hospital_id: @hospital.id, user_id: session[:user_id])
+    redirect_to user_favorites_path(session(:user_id))
   end
 
   def show
@@ -32,11 +27,8 @@ class FavoritesController < ApplicationController
 
   
   private
-  def load_user
-    return @user = User.find_by(id: params[:user_id])
-  end
 
-  def favorite_params
-    params.require(:favorite).permit(:user_id, :hospital_id)
+  def hospital_params
+    params.require(:data).permit(:provider_name, :provider_street_address, :provider_city, :provider_state, :provider_zip_code)
   end
 end
