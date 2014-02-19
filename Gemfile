@@ -49,3 +49,7 @@ gem 'httparty'
 # gem 'debugger', group: [:development, :test]
 
 gem 'pry-rails', group: [:development, :test]
+
+gem 'rails_12factor'
+
+ruby '2.1.0'
