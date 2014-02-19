@@ -6,12 +6,13 @@ class HospitalsController < ApplicationController
 
 
   def search
-    @procedure = (params[:drg_definition]).to_s.gsub(" ","+")
-    @drg_list = HTTParty.get("http://data.cms.gov/resource/97k6-zzx3.son?$select=drg_definition#")
+   @drg_list = HTTParty.get("http://data.cms.gov/resource/97k6-zzx3.json?$select=drg_definition#")
     @drg_list_array = []
     @drg_list.map { |procedure| @drg_list_array << procedure.values }
     @drg_list_array.uniq!
-
+    @drg_list_array.flatten!
+    @drg_list_array = @drg_list_array.zip(@drg_list_array)
+    binding.pry
     @procedure = (params[:drg_definition]).to_s.gsub(" ","+")
     @results = HTTParty.get("http://data.cms.gov/resource/97k6-zzx3.json?$order=average_covered_charges%20ASC&provider_state=#{params[:provider_state]}&drg_definition=#{@procedure}")
     #render(:search)
