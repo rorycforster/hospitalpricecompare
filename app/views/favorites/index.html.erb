@@ -3,16 +3,28 @@
 </head>
 <body>
 
-<ul>
-<% @favorites.each do |favorite|%>
-<li><%= favorite.hospital.provider_name %>.
-  <%= favorite.hospital.provider_street_address %>,
-  <%= favorite.hospital.provider_city %>,
-  <%= favorite.hospital.provider_state %>
-  <%= favorite.hospital.provider_zip_code %>
-  <%= button_to "Delete", user_favorite_path(@user.id, favorite.id), method: "delete" %>
-</li>
+<table>
+<thead>
+  <tr>
+    <th>HOSPITAL NAME</th>
+    <th>ADDRESS</th>
+    <th>CITY</th>
+    <th>STATE</th>
+    <th>ZIP CODE</th>
+  </tr>
+</thead>
 
-<% end %>
-</ul>
+
+<% @favorites.each do |favorite|%>
+  <tbody>
+  <tr>
+  <th><%= favorite.hospital.provider_name %></th>
+  <th><%= favorite.hospital.provider_street_address %></th>
+  <th><%= favorite.hospital.provider_city %></th>
+  <th><%= favorite.hospital.provider_state %></th>
+  <th><%= favorite.hospital.provider_zip_code %></th>
+  <td><%= button_to "Delete", user_favorite_path(@user.id, favorite.id), method: "delete" %></td>
+  </tr>
+  </tbody>
+  <% end %>
 </body>

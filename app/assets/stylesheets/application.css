@@ -14,8 +14,9 @@
 
 
 
-h1{font-family: 'Patua One', cursive;
-  color: #E8E8F0
+h1{font-family: 'Exo 2', sans-serif;
+  color: #228B22  ;
+  text-align: center;
 }
 
 body{
@@ -29,6 +30,9 @@ a{
 }
 
 h2{
+  color: #E8E8F0
+}
+ul{
   color: #E8E8F0
 }
 
