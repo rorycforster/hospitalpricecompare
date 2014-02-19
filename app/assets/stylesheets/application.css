@@ -11,25 +11,40 @@
  *= require_self
  *= require_tree .
  */
+li{
+  display:inline;
+  margin:0px;
+  padding:10px;
+}
 
 
+ul{
+  width: 100%;
+  list-style-type:none;
+  margin: -10px 0 3em -10px;
+  padding:10px;
+  overflow:hidden;
+  background-color: #47834B;
+}
 
 h1{
   font-size: 64px;
-   margin-top: 10px;
-  color: black  ;
+  margin-top: 10px;
+  color: #091D42  ;
   text-align: center;
-font-family: 'PT Serif Caption', serif;
+  font-family: 'PT Serif Caption', serif;
 }
 
 body{
   font-family: Arial, Helvetica, sans-serif;
-  background-color: #182945;
+  background-color: #091D42;
 }
 
 a{
   font-family: Arial, Helvetica, sans-serif;
   color: #FBF6CE;
+  text-decoration: none;
+  font-weight: bold;
 }
 
 h2{
@@ -61,13 +76,13 @@ table{
 
 thead{
   text-align: center;
-  background: #46A5E5;
+  background: #9AB4CB;
   font-size: 18px;
 }
 
 tbody tr{
-   text-align: left;
-   background: #E8E8F0;
+ text-align: left;
+ background: #E8E8F0;
 }
 
 tbody tr:hover {
@@ -80,9 +95,46 @@ th {
   padding: 0.5rem;
   border-color: white;
   border: 1px solid #ccc;
-  color: #182945;
+  color: #091D42;
 }
 
 td{
-  background-color: #182945;
+  background-color: #091D42;
 }
+
+input[type="submit"]{
+   border-top: 1px solid #96d1f8;
+   background: #65a9d7;
+   background: -webkit-gradient(linear, left top, left bottom, from(#3e779d), to(#65a9d7));
+   background: -webkit-linear-gradient(top, #3e779d, #65a9d7);
+   background: -moz-linear-gradient(top, #3e779d, #65a9d7);
+   background: -ms-linear-gradient(top, #3e779d, #65a9d7);
+   background: -o-linear-gradient(top, #3e779d, #65a9d7);
+   padding: 5px 10px;
+   -webkit-border-radius: 8px;
+   -moz-border-radius: 8px;
+   border-radius: 8px;
+   -webkit-box-shadow: rgba(0,0,0,1) 0 1px 0;
+   -moz-box-shadow: rgba(0,0,0,1) 0 1px 0;
+   box-shadow: rgba(0,0,0,1) 0 1px 0;
+   text-shadow: rgba(0,0,0,.4) 0 1px 0;
+   color: white;
+   font-size: 14px;
+   font-family: Helvetica, Arial, Sans-Serif;
+   text-decoration: none;
+   vertical-align: middle;
+   }
+input[type="submit"]:hover {
+   border-top-color: #28597a;
+   background: #28597a;
+   color: #ccc;
+   }
+input[type="submit"]:active {
+   border-top-color: #1b435e;
+   background: #1b435e;
+   }
+
+
+
+
+

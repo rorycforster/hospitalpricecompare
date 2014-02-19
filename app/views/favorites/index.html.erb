@@ -14,7 +14,6 @@
   </tr>
 </thead>
 
-
 <% @favorites.each do |favorite|%>
   <tbody>
   <tr>
@@ -23,8 +22,9 @@
   <th><%= favorite.hospital.provider_city %></th>
   <th><%= favorite.hospital.provider_state %></th>
   <th><%= favorite.hospital.provider_zip_code %></th>
-  <td><%= button_to "Delete", user_favorite_path(@user.id, favorite.id), method: "delete" %></td>
+  <td><%= button_to "Delete" , user_favorite_path(@user.id, favorite.id), method: "delete" %></td>
   </tr>
   </tbody>
+
   <% end %>
 </body>

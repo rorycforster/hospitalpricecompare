@@ -9,9 +9,12 @@
 <body>
 
 <header>
-<%= link_to("User Home", "#{user_path(session[:user_id])}") if !session[:user_id].nil?%>
-<p><%= link_to("Please Log In","/login") if session[:user_id].nil? %></p>
-<p><%= link_to("Log Out #{User.find_by(id: session[:user_id]).first_name}", "/session", method: "delete") unless session[:user_id].nil? %></p>
+<ul>
+<li><%= link_to("User Home", "#{user_path(session[:user_id])}") if !session[:user_id].nil?%></li>
+<li><%= link_to "Join Now", new_user_path if session[:user_id].nil? %></li>
+<li><%= link_to("Already a member? Please Log In","/login") if session[:user_id].nil? %></li>
+<li><%= link_to("Log Out #{User.find_by(id: session[:user_id]).first_name}", "/session", method: "delete") unless session[:user_id].nil? %></li>
+</ul>
 </header>
 
 <%= yield %>
