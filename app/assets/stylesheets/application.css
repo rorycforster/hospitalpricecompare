@@ -29,10 +29,13 @@ ul{
 
 h1{
   font-size: 64px;
-  margin-top: 10px;
+  margin: 10px 200px 10px 200px;
+  padding: 20px;
   color: #091D42  ;
   text-align: center;
   font-family: 'PT Serif Caption', serif;
+  background-color: white;
+  border-radius: 20px;
 }
 
 body{
@@ -134,6 +137,11 @@ input[type="submit"]:active {
    border-top-color: #1b435e;
    background: #1b435e;
    }
+
+html, body {height: 100%;}
+
+
+
 
 
 

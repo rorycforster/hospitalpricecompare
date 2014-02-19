@@ -32,5 +32,9 @@
 
 A full list of user stories can be found by looking at [this Pivotal Tracker Project](https://www.pivotaltracker.com/s/projects/1015698)
 
+## ERD
+
+https://docs.google.com/drawings/d/1sHzsSBegswxclHsLF0P7A0T033NzGoTq_TDwoIY4UhM/edit?usp=sharing
+
 ---
 ###### Written by Rory Budnick
