@@ -14,9 +14,12 @@
 
 
 
-h1{font-family: 'Exo 2', sans-serif;
-  color: #228B22  ;
+h1{
+  font-size: 64px;
+   margin-top: 10px;
+  color: black  ;
   text-align: center;
+font-family: 'PT Serif Caption', serif;
 }
 
 body{
@@ -83,4 +86,3 @@ th {
 td{
   background-color: #182945;
 }
-
