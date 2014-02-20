@@ -4,8 +4,6 @@ class UsersController < ApplicationController
 
   def new
     @user = User.new
-
-    render(:new)
   end
 
   def create
@@ -19,7 +17,6 @@ class UsersController < ApplicationController
   end
 
   def show
-    render(:show)
   end
 
   def index

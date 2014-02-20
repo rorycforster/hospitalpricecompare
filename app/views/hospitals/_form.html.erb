@@ -2,11 +2,6 @@
   <%= label_tag("State Abbreviation:") %>
   <%= text_field_tag :provider_state %>
   <%= label_tag("Procedure:") %>
-<select name="drg_definition">
-  <% @drg_list_array.uniq.each do |drg| %>
-  <option><%= drg[0] %></option>
-  <% end %>
-</select>
-
+  <%= select_tag(:drg_definition, options_for_select(@drg_list_array)) %>
   <%= submit_tag "Search", :name => nil%>
 <% end %>

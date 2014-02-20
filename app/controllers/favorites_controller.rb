@@ -25,6 +25,7 @@ class FavoritesController < ApplicationController
   def hospital_params
     params.require(:data).permit(:provider_name, :provider_street_address, :provider_city, :provider_state, :provider_zip_code)
   end
+  
   def load_favorite
     return @favorite = Favorite.find(params[:id])
   end
