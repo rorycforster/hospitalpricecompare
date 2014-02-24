@@ -1,7 +1,7 @@
 <%= form_tag( search_hospitals_path, method: "get") do |f| %>
-  <%= label_tag("State Abbreviation:") %>
-  <%= text_field_tag :provider_state %>
-  <%= label_tag("Procedure:") %>
-  <%= select_tag(:drg_definition, options_for_select(@drg_list_array)) %>
-  <%= submit_tag "Search", :name => nil%>
+<%= label_tag("State Abbreviation:") %>
+<%= text_field_tag :provider_state %>
+<%= label_tag("Procedure:") %>
+<%= select_tag(:drg_definition, options_for_select(@drg_list_array)) %>
+<%= submit_tag "Search", :name => nil%>
 <% end %>

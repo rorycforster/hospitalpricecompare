@@ -52,4 +52,5 @@ gem 'pry-rails', group: [:development, :test]
 
 gem 'rails_12factor'
 
+#Ruby version
 ruby '2.1.0'

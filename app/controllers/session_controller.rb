@@ -8,10 +8,9 @@ class SessionController < ApplicationController
     # find if any user has that email
     user = User.find_by(email: params[:email])
     
-    # if that user exists and it has a password that
-    # was sent
+    # if that user exists and it has a password that was sent
     if user && ( user.authenticate(params[:password]) )
-      
+
       # save the user_id in the session hash
       session[:user_id] = user.id
 

@@ -1,37 +1,32 @@
 <body>
-<h2>Search Results</h2>
-<h4>Sorted by Average Covered Charges</h4>
+  <h2>Search Results</h2>
+  <h4>Sorted by Average Covered Charges</h4>
 
+  <table>
+    <thead>
+      <tr>
+        <th>HOSPITAL NAME</th>
+        <th>CITY</th>
+        <th>STATE</th>
+        <th>AVERAGE COVERED CHARGES*</th>
+        <th>AVERAGE MEDICARE PAYMENTS*</th>
+      </tr>
+    </thead>
 
-<table>
-<thead>
-  <tr>
-    <th>HOSPITAL NAME</th>
-    <th>CITY</th>
-    <th>STATE</th>
-    <th>AVERAGE COVERED CHARGES*</th>
-    <th>AVERAGE MEDICARE PAYMENTS*</th>
-
-
-  </tr>
-</thead>
-
+    <% @results.each do |result| %>
+    <tbody>
+      <tr>
+        <th><%= result["provider_name"] %> </th>
+        <th><%= result["provider_city"] %></th>
+        <th><%= result["provider_state"] %></th>
+        <th><%= number_to_currency(result["average_covered_charges"].to_i) %></th>
+        <th><%= number_to_currency(result["average_medicare_payments"].to_i) %></th>
+        <td><%= button_to "Favorite", action: "create", controller: "favorites", user_id: session[:user_id], data: result %></td>
+      </tr>
+    </tbody>
+    <% end %>
+  </table>
   
-  <% @results.each do |result| %>
-  <tbody>
-  <tr>
-  <th><%= result["provider_name"] %> </th>
-  <th><%= result["provider_city"] %></th>
-  <th><%= result["provider_state"] %></th>
-  <th><%= number_to_currency(result["average_covered_charges"].to_i) %></th>
-  <th><%= number_to_currency(result["average_medicare_payments"].to_i) %></th>
-  <td><%= button_to "Favorite", action: "create", controller: "favorites", user_id: session[:user_id], data: result %></td>
-  </tr>
-  </tbody>
-  <% end %>
-
-
-</table>
-<h5>*Average Covered Charges: Average price that hospital billed Medicare</h5>
-<h5>*Average Medicare Payments: Average price that Medicare paid</h5>
+  <h5>*Average Covered Charges: Average price that hospital billed Medicare</h5>
+  <h5>*Average Medicare Payments: Average price that Medicare paid</h5>
 </body>

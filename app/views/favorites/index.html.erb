@@ -1,30 +1,33 @@
 <head>
-<h2>Saved Hospitals</h2>
+  <h2>Saved Hospitals</h2>
 </head>
+
 <body>
 
-<table>
-<thead>
-  <tr>
-    <th>HOSPITAL NAME</th>
-    <th>ADDRESS</th>
-    <th>CITY</th>
-    <th>STATE</th>
-    <th>ZIP CODE</th>
-  </tr>
-</thead>
+  <table>
 
-<% @favorites.each do |favorite|%>
-  <tbody>
-  <tr>
-  <th><%= favorite.hospital.provider_name %></th>
-  <th><%= favorite.hospital.provider_street_address %></th>
-  <th><%= favorite.hospital.provider_city %></th>
-  <th><%= favorite.hospital.provider_state %></th>
-  <th><%= favorite.hospital.provider_zip_code %></th>
-  <td><%= button_to "Delete" , user_favorite_path(@user.id, favorite.id), method: "delete" %></td>
-  </tr>
-  </tbody>
+    <thead>
+      <tr>
+        <th>HOSPITAL NAME</th>
+        <th>ADDRESS</th>
+        <th>CITY</th>
+        <th>STATE</th>
+        <th>ZIP CODE</th>
+      </tr>
+    </thead>
 
-  <% end %>
-</body>
+    <% @favorites.each do |favorite|%>
+    <tbody>
+      <tr>
+        <th><%= favorite.hospital.provider_name %></th>
+        <th><%= favorite.hospital.provider_street_address %></th>
+        <th><%= favorite.hospital.provider_city %></th>
+        <th><%= favorite.hospital.provider_state %></th>
+        <th><%= favorite.hospital.provider_zip_code %></th>
+        <td><%= button_to "Delete" , user_favorite_path(@user.id, favorite.id), method: "delete" %></td>
+      </tr>
+    </tbody>
+
+    <% end %>
+    
+  </body>

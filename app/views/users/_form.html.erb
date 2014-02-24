@@ -1,5 +1,5 @@
 <body>
-<%= form_for @user do |f| %>
+  <%= form_for @user do |f| %>
   
   <%= f.label :first_name %>
   <%= f.text_field :first_name %>
@@ -33,5 +33,5 @@
   <br/>
 
   <%= f.submit @user.id.nil? ? "Join" : "Save Changes" %>
-<% end %>
+  <% end %>
 </body>

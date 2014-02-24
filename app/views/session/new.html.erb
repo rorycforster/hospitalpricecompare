@@ -1,18 +1,18 @@
 <body>
-<% unless @message.nil? %>
+  <% unless @message.nil? %>
   <div id="errors">
     <h3>Errors!</h3>
     <ul>
       <li><em><%= @message %></em></li>
     </ul>
   </div>
-<% end %>
-<%= form_tag "/session" do %>
+  <% end %>
+  <%= form_tag "/session" do %>
   <%= label_tag :email %>
   <%= email_field_tag :email %>
   <%= label_tag :password %>
   <%= password_field_tag :password %>
   
   <%= submit_tag "Log in" %>
-<% end %>
+  <% end %>
 </body>

@@ -4,7 +4,7 @@
 
 ### Overview
 
-**HospitalPriceCompare** is an application for searching for the most affordable hospital. HospitalPriceCompare was developed as a sample Rails project for the January 2014 Web Development Immersive course at General Assembly. It was developed over a 4 day sprint to model the agile software development process.
+**HospitalPriceCompare** is an application for searching for the most affordable hospital. HospitalPriceCompare was developed as a Rails project for the January 2014 Web Development Immersive course at General Assembly. It was developed over a 4 day sprint to model the agile software development process.
 
 ### Technologies Used
 
@@ -16,9 +16,9 @@
 
 ### User Stories Completed
 
-* As a user I want to be able to sign in/out of a secure account so that I can keep my saved information private.
+* As a user I want to be able to sign in to a secure account so that I can keep my saved information private.
 * As a user I want to be able to log out.
-* As a user I can sign up for the site, so that I can log in in the future and keep a saved list of favorite hospitals.
+* As a new user I can sign up for the site, so that I can log in in the future and keep a saved list of favorite hospitals.
 * As a user I want to be able to access my user welcome page, which has "Search hospitals" and "View favorites" options, from anywhere in the site, so that the key functions of the site are easily accessible.
 * As a user I can search hospitals by state and procedure so that I can view hospitals that pertain to my situation.
 * As a user I want to be able to look at my list of favorited hospitals so that I can keep track of hospitals I may go to.
