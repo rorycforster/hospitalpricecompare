@@ -48,9 +48,17 @@ gem 'httparty'
 # Use debugger
 # gem 'debugger', group: [:development, :test]
 
-gem 'pry-rails', group: [:development, :test]
-
 gem 'rails_12factor'
 
 #Ruby version
 ruby '2.1.0'
+
+group :development, :test do
+  gem 'pry-rails'
+  gem 'rspec-rails', '~> 3.0.0.beta'
+  gem 'shoulda-matchers'
+  gem 'capybara'
+  gem 'launchy'
+  gem 'factory_girl_rails'
+  gem 'ffaker'
+end
