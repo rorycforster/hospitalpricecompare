@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Hospitalpricecompare</title>
+  <title>HospitalPriceCompare</title>
   <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
   <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
   <%= csrf_meta_tags %>
 </head>
-<body>
 
+<body>
   <header>
     <ul>
       <li><%= link_to("User Home", "#{user_path(session[:user_id])}") if !session[:user_id].nil?%></li>

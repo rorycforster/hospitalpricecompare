@@ -27,15 +27,29 @@ ul{
   background-color: #47834B;
 }
 
-h1{
-  font-size: 64px;
+#app-title{
+  font-size: 66px;
   margin: 10px 200px 10px 200px;
   padding: 20px;
   color: #091D42  ;
   text-align: center;
-  font-family: 'PT Serif Caption', serif;
+  font-family: 'Open Sans', sans-serif;
   background-color: white;
   border-radius: 20px;
+  position: relative;
+  width: 900px;
+}
+
+#tagline{
+  font-family: 'PT Serif Caption', serif;
+  font-size: 40px;
+  text-align: center;
+  color: black;
+  font-style:italic;
+}
+
+#welcome{
+  background: url(<%= image_path 'welcome.jpg' %>);
 }
 
 body{
