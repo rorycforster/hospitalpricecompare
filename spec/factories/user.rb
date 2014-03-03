@@ -4,6 +4,7 @@ FactoryGirl.define do
     last_name { Faker::Name.last_name }
     dob Date.today
     email { Faker::Internet.email } 
+    gender "user_gender_m"
     password "rory"
     password_confirmation "rory"
   end
