@@ -12,87 +12,115 @@
  *= require_tree .
  *= require jquery.ui.all 
  */
- li{
+#welcome{
+  background: url("hospital.jpg") no-repeat center center fixed;   
+  -webkit-background-size: 100% 100%; 
+  -moz-background-size: 100% 100%;
+  -o-background-size: 100% 100%;
+  background-size: 100% 100%;
+  margin-right: 300px;
+}
+
+ul#nav-bar li{
   display:inline;
   margin:0px;
   padding:10px;
 }
 
 
-ul{
-  width: 100%;
+ul#nav-bar li a{
   list-style-type:none;
-  padding:20px;
-  overflow:hidden;
-  background-color: rgb(6,121,196);
-  height: 100px;
-  margin: -10px 0px 0px -10px;
-  padding-right: 50px;
+  color: black;
+  letter-spacing: 1px;
+  font-weight: 500;
+  text-shadow: 0 0 1px rgba(255,255,255,0.3);
+  font-size: 1em;
 }
 
-#title-section{
-  background-color: rgb(6,121,196)
-}
-
-#app-title{
-  font-size: 66px;
-  margin: -30px 200px 10px 0px;
-  padding: 20px;
-  color: #FFF  ;
-  text-align: center;
-  font-family: 'Open Sans', sans-serif;
-  border-radius: 20px;
-  position: relative;
+header#nav-header{
+  background-color: rgba(255,255,255, 0.3);
+  height: 50px;
   width: 100%;
+  position: fixed;    
+  z-index: 10;
+  margin-left: -10px;
+  margin-top: -20px;
+
 }
 
-#tagline{
-  font-family: 'PT Serif Caption', serif;
-  font-size: 40px;
-  text-align: center;
+div#title-section{
+  height: 50px;
+  position: relative;
+  top: 50px;
+  display: block;
+  width: 50%;
+  left: 670px;
+}
+
+#app-title span{
+  font-size: 76px;
+  color: white;
+  text-align: left;
+  font-family: 'Roboto', sans-serif;
+  position: relative;
+  letter-spacing: 0.1em;
+  font-weight: 600;
+  letter-spacing: 1px;
+  width: 50%;
+  display: block;
+  line-height: 70px;
+}
+
+div#tagline{
+  font-family: 'Roboto', sans-serif;
+  font-size: 30px;
+  text-align: left;
+  position: relative;
   color: black;
   font-style:italic;
+  font-weight: 500;
+  padding-top: 40px;
+}
+div#tagline span{
+  padding-left: 10px;
 }
 
-#welcome{
-  background: url(<%= image_path 'welcome.jpg' %>);
-}
 
 body{
   font-family: Arial, Helvetica, sans-serif;
-  background-color: #091D42;
+  background-color: rgb(13,46,116);
 }
 
 a{
   font-family: Arial, Helvetica, sans-serif;
-  color: #FBF6CE;
   text-decoration: none;
   font-weight: bold;
   font-size: 18px;
 }
-
-h2{
-  color: #E8E8F0
+p, a:visited{
+  color: red;
 }
-ul{
-  color: #E8E8F0
+
+p{
+  color: black;
 }
 
 h4{
-  color: #E8E8F0;
+  color: rgb(121,150,184);
   font-style:italic;
 }
 
 h5{
-  color: #E8E8F0;
+  color: rgb(121,150,184);
 }
 
 label{
-  color: #E8E8F0;
+  color: rgb(121,150,184);
 }
 
 table{
-  color: #E8E8F0;
+  color: rgb(121,150,184);
+
   border-collapse: collapse;
   border-spacing: 0;
   margin: 25px auto;
@@ -155,9 +183,5 @@ input[type="submit"]:hover {
  color: #ccc;
 }
 
-input[type="submit"]:active {
- border-top-color: #1b435e;
- background: #1b435e;
-}
 
-html, body {height: 100%;}
+
