@@ -1,4 +1,4 @@
-require 'spec_helper'
+require "spec_helper"
 
 describe "a user can sign up" do
   let(:user) { FactoryGirl.build(:user) }

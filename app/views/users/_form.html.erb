@@ -10,8 +10,13 @@
   <br/>
 
   <%= f.label "Date of Birth" %>
-  <%= f.date_field :dob %>
+  <%= f.text_field :dob, :class => "datepicker" %>
   <br/>
+  <script>
+  $(function() {
+    $('.datepicker').datepicker();
+  });
+  </script>
 
   <%= label_tag("Gender:") %>
   <%= label_tag(:gender_male, "M") %>

@@ -1,5 +1,6 @@
 class FavoritesController < ApplicationController
   before_action :load_favorite, only: [:show, :edit, :update, :destroy]
+  
 
   def index
     #view favorites
