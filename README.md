@@ -1,18 +1,22 @@
 # HospitalPriceCompare
 
-### GA WDI NYC Jan 14, Project 1
+### GA WDI NYC Jan 14, Project 1(Continued for Project 3)
 
 ### Overview
 
-**HospitalPriceCompare** is an application for searching for the most affordable hospital. HospitalPriceCompare was developed as a Rails project for the January 2014 Web Development Immersive course at General Assembly. It was developed over a 4 day sprint to model the agile software development process.
+**HospitalPriceCompare** is an application for searching for the most affordable hospital. HospitalPriceCompare was developed as a Rails project for the January 2014 Web Development Immersive course at General Assembly. It was initially developed over a 4 day sprint to model the agile software development process.
 
 ### Technologies Used
 
 * Ruby 2.1.0
 * Ruby on Rails 4.0.2
 * PostgreSQL Database
+* jQuery
 * Authentication & Authorization from scratch using [bcrypt-ruby](http://bcrypt-ruby.rubyforge.org/)
 * [Socrata Open Data API (SODA)](http://dev.socrata.com/) & [HTTParty](https://github.com/jnunemaker/httparty)
+* Gems including HTTParty, Nokogiri, jQuery UI, Ffaker, & Factory Girl
+* Testing technologies including Rspec, Capybara & Jasmine
+
 
 ### User Stories Completed
 
