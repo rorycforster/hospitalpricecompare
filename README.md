@@ -14,8 +14,8 @@
 * jQuery
 * Authentication & Authorization from scratch using [bcrypt-ruby](http://bcrypt-ruby.rubyforge.org/)
 * [Socrata Open Data API (SODA)](http://dev.socrata.com/) & [HTTParty](https://github.com/jnunemaker/httparty)
-* Gems including HTTParty, Nokogiri, jQuery UI, Ffaker, & Factory Girl
-* Testing technologies including Rspec, Capybara & Jasmine
+* Gems including HTTParty, jQuery UI, Ffaker, & Factory Girl
+* Testing technologies including Rspec & Capybara
 
 
 ### User Stories Completed
