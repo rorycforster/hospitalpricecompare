@@ -9,7 +9,7 @@ class HospitalsController < ApplicationController
 
   def search
     #display search results based on state and procedure input
-    @procedure = (params[:drg_definition]).to_s.gsub(" ","+")
+    @procedure = (params[:drg_definition]).gsub(" ","%20").gsub("&", "%26")
     @results = HTTParty.get("http://data.cms.gov/resource/97k6-zzx3.json?$order=average_covered_charges%20ASC&provider_state=#{params[:provider_state]}&drg_definition=#{@procedure}&$$app_token=#{SODA_CLIENT_ID}")
   end
 

@@ -13,8 +13,7 @@
         <th>AVERAGE MEDICARE PAYMENTS*</th>
       </tr>
     </thead>
-
-    <% @results.each do |result| %>
+    <% @results.map do |result| %>
     <tbody>
       <tr>
         <th><%= result["provider_name"] %> </th>
@@ -26,7 +25,10 @@
       </tr>
     </tbody>
     <% end %>
+
+
   </table>
+  <h3><%=@results%></h3>
   
   <h5>*Average Covered Charges: Average price that hospital billed Medicare</h5>
   <h5>*Average Medicare Payments: Average price that Medicare paid</h5>
