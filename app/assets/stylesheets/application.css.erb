@@ -23,9 +23,7 @@
 
 ul#nav-bar li{
   display:inline;
-  margin:0px;
-  padding:10px;
-
+  padding: 10px;
 }
 
 
@@ -35,18 +33,20 @@ ul#nav-bar li a{
   color: #ffffff;
   letter-spacing: 1px;
   font-weight: 600;
-  text-shadow: 0 0 1px rgba(255,255,255,0.3);
+  text-shadow: 0 0 1px rgba(255,255,255,0.5);
   font-size: 1em;
 }
 
+
 header#nav-header{
   background-color: rgb(115, 143, 180);
-  height: 75px;
+  height: 60px;
   width: 100%;
   position: fixed;    
   z-index: 10;
   margin-left: -10px;
   margin-top: -10px;
+  padding-top: 13px;
 }
 
 div#title-section{
@@ -82,6 +82,7 @@ div#tagline{
   font-weight: 500;
   padding-top: 40px;
 }
+
 div#tagline span{
   padding-left: 10px;
 }
@@ -118,7 +119,6 @@ label{
 
 table{
   color: rgb(121,150,184);
-
   border-collapse: collapse;
   border-spacing: 0;
   margin: 25px auto;
@@ -243,6 +243,10 @@ div#user-options p a {
   color: white;
 }
 
+#user-page{
+  padding-left: 20px;
+}
+
 #small-h{
   position: absolute;
   top: 0;
@@ -250,4 +254,8 @@ div#user-options p a {
   height: 73px;
   width: 85px;
   z-index:11;
+}
+
+body.user-show ul#nav-bar li a.active, body.hospital-search ul#nav-bar li a.active{
+  color: green;
 }
