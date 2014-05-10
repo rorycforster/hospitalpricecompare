@@ -14,6 +14,9 @@
   <% end %>
 
   <%= render "form" %>
+  <%= form_tag user_path(@user), method: "delete" do %>
+  <%= submit_tag("Delete My Account", id:"delete-account-button") %>
+  <% end %>
 
   <p><%= link_to "Return to user home.", user_path(@user) %></p>
 </body>

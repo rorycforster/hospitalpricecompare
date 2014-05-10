@@ -1,12 +1,12 @@
 <header id="nav-header">
+  <a href="/"><img src="/assets/smallH.png" id="small-h"></a>
   <ul id="nav-bar">
     <li><%= link_to("My Account", "#{user_path(session[:user_id])}", class:"my-account") if !session[:user_id].nil?%></li>
     <li><%= link_to "Search Hospitals", hospitals_path, class:"search-hospitals" %></li>
-    <li><%= link_to "Join Now", new_user_path, class:"join-now" if session[:user_id].nil? %></li>
-    <li><%= link_to("Already a member? Please Log In","/login", class:"log-in") if session[:user_id].nil? %></li>
-    <li><%= link_to("Log Out #{User.find_by(id: session[:user_id]).first_name}", "/session", method: "delete", class:"log-out") unless session[:user_id].nil? %></li>
+    <li><%= link_to "Join Now", new_user_path, class:"nav-right" if session[:user_id].nil? %></li>
+    <li><%= link_to("Already a member? Please Log In","/login", class:"nav-right") if session[:user_id].nil? %></li>
+    <li><%= link_to("Log Out #{User.find_by(id: session[:user_id]).first_name}", "/session", method: "delete", class:"nav-right") unless session[:user_id].nil? %></li>
   </ul>
-  <a href="/"><img src="/assets/smallH.png" id="small-h"></a>
 </header>
 
 <div id="break-header">
