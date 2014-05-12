@@ -1,5 +1,4 @@
 <header id="nav-header">
-  <a href="/"><img src="/assets/smallH.png" id="small-h"></a>
   <ul id="nav-bar">
     <li><%= link_to("My Account", "#{user_path(session[:user_id])}", class:"my-account") if !session[:user_id].nil?%></li>
     <li><%= link_to "Search Hospitals", hospitals_path, class:"search-hospitals" if !session[:user_id].nil?%></li>

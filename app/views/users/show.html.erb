@@ -1,12 +1,14 @@
 <body class="user-show">
   <%= render 'layouts/header' %>
   <div id="user-page">
+  <div id="welcome-opener">
   <h2>Welcome <%= @user.first_name %></h2>
+  </div>
   <div id="user-options">
+    <p><img src="/assets/smallH.png" id="small-h"></p>
+    <p><img src="/assets/favorites.png" id="fav-image"><%= link_to "View Favorites", user_favorites_path(@user) %></p>
 
-    <p><%= link_to "View Favorites", user_favorites_path(@user) %></p>
-
-    <p><%= link_to "Edit My Info", edit_user_path(@user) %></p>
+    <p><img src="/assets/myinfo.png" id="myinfo-image"><%= link_to "Edit My Info", edit_user_path(@user) %></p>
 
   </div>
 </body>
