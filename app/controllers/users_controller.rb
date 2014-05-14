@@ -18,6 +18,15 @@ class UsersController < ApplicationController
     end
   end
 
+  def update
+    @update_worked = @user.update(user_params)
+    if @update_worked
+      redirect_to user_path(@user)
+    else
+      render(:edit)
+    end
+  end
+
   def show
   end
 
