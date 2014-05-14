@@ -4,7 +4,7 @@ class HospitalsController < ApplicationController
     #get list of procedures to use in drop down menu
     @drg_list = HTTParty.get("http://data.cms.gov/resource/97k6-zzx3.json?$select=drg_definition&$$app_token=#{SODA_CLIENT_ID}")
     @drg_list_array = @drg_list.map { |procedure| procedure.values }
-    @drg_list_array.uniq!.flatten!
+    @drg_list_array.uniq!.flatten!.sort!
   end
 
   def search
