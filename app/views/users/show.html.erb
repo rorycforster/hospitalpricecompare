@@ -5,11 +5,11 @@
   <h2>Welcome <%= @user.first_name %></h2>
   </div>
   <div id="user-options">
-    <p><a href=<%=hospitals_path%>><img src="/assets/smallH.png" id="small-h"></a><%= link_to "Search Hospitals", hospitals_path %></p>
+    <p><a href=<%=hospitals_path%>><img src="/assets/smallH.png" id="small-h" class="image-link"></a><%= link_to "Search Hospitals", hospitals_path, class: "no-image-link" %></p>
     
-    <p><a href=<%=user_favorites_path(@user)%>><img src="/assets/favorites.png" id="fav-image"></a><%= link_to "View Favorites", user_favorites_path(@user) %></p>
+    <p><a href=<%=user_favorites_path(@user)%>><img src="/assets/favorites.png" id="fav-image" class="image-link"></a><%= link_to "View Favorites", user_favorites_path(@user), class: "no-image-link" %></p>
 
-    <p><a href=<%=edit_user_path(@user) %>><img src="/assets/myinfo.png" id="myinfo-image"></a><%= link_to "Edit My Info", edit_user_path(@user) %></p>
+    <p><a href=<%=edit_user_path(@user) %>><img src="/assets/myinfo.png" id="myinfo-image" class="image-link"></a><%= link_to "Edit My Info", edit_user_path(@user), class: "no-image-link" %></p>
 
   </div>
 </body>
