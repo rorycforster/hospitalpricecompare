@@ -10,6 +10,7 @@
         <th>CITY</th>
         <th>STATE</th>
         <th>AVERAGE COVERED CHARGES*</th>
+        <th>AVERAGE TOTAL PAYMENTS*</th>
         <th>AVERAGE MEDICARE PAYMENTS*</th>
       </tr>
     </thead>
@@ -20,6 +21,7 @@
         <th><%= result["provider_city"] %></th>
         <th><%= result["provider_state"] %></th>
         <th><%= number_to_currency(result["average_covered_charges"].to_i) %></th>
+        <th><%= number_to_currency(result["average_total_payments"].to_i) %></th>
         <th><%= number_to_currency(result["average_medicare_payments"].to_i) %></th>
         <td><%= button_to "Favorite", action: "create", controller: "favorites", user_id: session[:user_id], data: result %></td>
       </tr>

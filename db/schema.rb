@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140213205632) do
+ActiveRecord::Schema.define(version: 20140610164435) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -27,6 +27,21 @@ ActiveRecord::Schema.define(version: 20140213205632) do
     t.string "provider_city"
     t.string "provider_state"
     t.string "provider_zip_code"
+  end
+
+  create_table "inputs", force: true do |t|
+    t.text "drg_definition"
+    t.text "provider_id"
+    t.text "provider_name"
+    t.text "provider_street_address"
+    t.text "provider_city"
+    t.text "provider_state"
+    t.text "provider_zip_code"
+    t.text "hospital_referral_region_hrr_description"
+    t.text "total_discharges"
+    t.text "average_covered_charges"
+    t.text "average_total_payments"
+    t.text "average_medicare_payments"
   end
 
   create_table "users", force: true do |t|

@@ -32,6 +32,7 @@ gem 'json'
 gem 'nokogiri'
 gem 'will_paginate'
 gem 'jquery-ui-rails'
+gem 'postgres-copy'
 
 group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.
