@@ -17,3 +17,6 @@
 
 #Ignore the database.yml file
 /config/database.yml
+
+#Ignore the large medicare data file
+/public/assets/medicaredata.csv
