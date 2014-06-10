@@ -23,7 +23,7 @@
         <th><%= number_to_currency(result["average_covered_charges"].to_i) %></th>
         <th><%= number_to_currency(result["average_total_payments"].to_i) %></th>
         <th><%= number_to_currency(result["average_medicare_payments"].to_i) %></th>
-        <td><%= button_to "Favorite", action: "create", controller: "favorites", user_id: session[:user_id], data: result %></td>
+        <td><%= button_to "Favorite", action: "create", controller: "favorites", user_id: session[:user_id], provider_name: result["provider_name"], provider_street_address: result["provider_street_address"], provider_city: result["provider_city"], provider_state: result["provider_state"], provider_zip_code: result["provider_zip_code"].to_i%></td>
       </tr>
     </tbody>
     <% end %>
