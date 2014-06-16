@@ -2,6 +2,7 @@ class HospitalsController < ApplicationController
 
   def index
     #get list of procedures to use in drop down menu
+    # &: sugar for 
     @drg_list = Input.select(:drg_definition).map(&:drg_definition).uniq.sort
   end
 

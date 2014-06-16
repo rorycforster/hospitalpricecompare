@@ -10,6 +10,6 @@ class ApplicationController < ActionController::Base
   def logged_in?
     current_user.present?
   end
-
+  #makes the current_user controller method available to the view
   helper_method :current_user, :logged_in?
 end
