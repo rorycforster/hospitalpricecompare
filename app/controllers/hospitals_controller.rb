@@ -2,7 +2,7 @@ class HospitalsController < ApplicationController
 
   def index
     #get list of procedures to use in drop down menu
-    # &: sugar for 
+    # & operator takes its operand, converts it to a Proc object if it isn't already (by calling to_proc on it) and passes it to the method as if a block had been used.
     @drg_list = Input.select(:drg_definition).map(&:drg_definition).uniq.sort
   end
 
